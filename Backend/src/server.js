@@ -8,7 +8,7 @@ app.use(cors());
 app.use(routes);
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Restaurant App');
 });
 
 app.listen(3000, () => {
