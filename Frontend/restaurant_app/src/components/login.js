@@ -1,5 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
+import HomeWaiter from './Waiter/home_waiter.js'
+import HomeChef from './Chef/home_chef.js'
+import HomeManager from './Manager/home_manager.js'
 
 function Login() {
 
@@ -60,10 +63,14 @@ function Login() {
             </div>
             ): (
                 <div>
-                    <h2>
-                        Hello, {user.name}
-                    </h2>
-                    <button type="buttom" 
+                    {user.role === 'manager' ? (
+                        <HomeManager user={user}/>
+                         ) : user.role === 'chef' ? (
+                        <HomeChef user={user}/>
+                        ) : (
+                        <HomeWaiter user={user}/>
+                        )}
+                        <button type="buttom" 
                             className="btn-login"
                             onClick={(e) => handleLogout(e)}>Logout</button>
                 </div>
