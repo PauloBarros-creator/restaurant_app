@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
 
         try{
-        const response = await axios.post("http://localhost:3000/login",
+        const response = await axios.post("http://localhost:3001/login",
             JSON.stringify({email, password}),
             {
                 headers: { "Content-type": "application/json" }
