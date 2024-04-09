@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
-import HomeWaiter from './Waiter/home_waiter.js'
-import HomeChef from './Chef/home_chef.js'
-import HomeManager from './Manager/home_manager.js'
+import HomeWaiter from '../screens/Home/home_waiter.js'
+import HomeChef from '../screens/Home/home_chef.js'
+import HomeManager from '../screens/Home/home_manager.js'
 
 function Login() {
 
